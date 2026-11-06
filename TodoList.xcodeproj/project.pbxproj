@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FBB6C7B4309DA07A00BE3628 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FBB6C7B3309DA07A00BE3628 /* FirebaseAuth */; };
+		FBB6C7B6309DA07A00BE3628 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = FBB6C7B5309DA07A00BE3628 /* FirebaseCore */; };
+		FBB6C7B8309DA07A00BE3628 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FBB6C7B7309DA07A00BE3628 /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		FBB6C789309D13B000BE3628 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBB6C7B6309DA07A00BE3628 /* FirebaseCore in Frameworks */,
+				FBB6C7B4309DA07A00BE3628 /* FirebaseAuth in Frameworks */,
+				FBB6C7B8309DA07A00BE3628 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +121,9 @@
 			);
 			name = TodoList;
 			packageProductDependencies = (
+				FBB6C7B3309DA07A00BE3628 /* FirebaseAuth */,
+				FBB6C7B5309DA07A00BE3628 /* FirebaseCore */,
+				FBB6C7B7309DA07A00BE3628 /* FirebaseFirestore */,
 			);
 			productName = TodoList;
 			productReference = FBB6C77A309D13AE00BE3628 /* TodoList.app */;
@@ -195,6 +207,9 @@
 			);
 			mainGroup = FBB6C771309D13AE00BE3628;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FBB6C7B2309DA07A00BE3628 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FBB6C77B309D13AE00BE3628 /* Products */;
 			projectDirPath = "";
@@ -408,7 +423,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = BBBB.TodoList;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sumaiyaafrin.TodoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -445,7 +460,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = BBBB.TodoList;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sumaiyaafrin.TodoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -583,6 +598,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FBB6C7B2309DA07A00BE3628 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 12.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FBB6C7B3309DA07A00BE3628 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBB6C7B2309DA07A00BE3628 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		FBB6C7B5309DA07A00BE3628 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBB6C7B2309DA07A00BE3628 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		FBB6C7B7309DA07A00BE3628 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBB6C7B2309DA07A00BE3628 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FBB6C772309D13AE00BE3628 /* Project object */;
 }

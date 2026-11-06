@@ -1,17 +1,23 @@
-//
-//  TodoListApp.swift
-//  TodoList
-//
-//  Created by Sumaiya Afrin Eva on 6/11/26.
-//
 
 import SwiftUI
+import FirebaseCore
 
 @main
-struct TodoListApp: App {
+struct FirebaseTodoApp: App {
+
+    @StateObject private var authViewModel: AuthViewModel
+
+    init() {
+        FirebaseApp.configure()
+        _authViewModel = StateObject(
+            wrappedValue: AuthViewModel()
+        )
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(authViewModel)
         }
     }
 }
